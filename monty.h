@@ -1,5 +1,12 @@
 #ifndef	_MONTY_H_
 #define _MONTY_H_
+#include <stdio.h>
+#include <stdlib.h>
+#include <sys/types.h>
+#include <unistd.h>
+#include <fcntl.h>
+#include <string.h>
+#include <ctype.h>
 
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
@@ -30,6 +37,27 @@ typedef struct instruction_s
         char *opcode;
         void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
+
+/**
+ * struct my_args - holds multiple variables
+ *
+ *
+ *
+ */
+typedef struct my_args
+{
+	FILE *strm;
+	char *ln;
+} my_argss;
+
+extern my_argss *my_arguments;
+
+int arg_val(int argc);
+
+void args_init();
+void failed_malloc(void);
+void get_Strm(char *file);
+void failed_Strm(char *file);
 
 
 #endif /* MONTY_H */
