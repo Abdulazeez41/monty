@@ -48,12 +48,18 @@ typedef struct my_args
 {
 	FILE *strm;
 	char *ln;
+	unsigned int ln_no;
+	char **tkns;
+	int no_of_tkns;
+	instruction_t *intrn;
 } my_argss;
 
 extern my_argss *my_arguments;
 
 int arg_val(int argc);
 
+void freed(void);
+void arg_free();
 void args_init();
 void failed_malloc(void);
 void get_Strm(char *file);
