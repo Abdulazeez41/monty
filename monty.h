@@ -66,6 +66,10 @@ int num(char *str);
 void freed(void);
 void arg_free(void);
 void args_init(void);
+void arg_free_all(void);
+void c_stream(void);
+void f_tkns(void);
+void f_args(void);
 void failed_malloc(void);
 void get_strm(char *file);
 void free_stack(stack_t *head);
@@ -73,6 +77,7 @@ void tkn_ln(void);
 void arg_val(int argc);
 void push(stack_t **stack, unsigned int ln_no);
 void pall(stack_t **stack, unsigned int ln_no);
+void pint(stack_t **stack, unsigned int ln_no);
 
 ssize_t getline(char **lineptr, size_t *n, FILE *stream);
 int dprintf(int fd, const char *format, ...);
