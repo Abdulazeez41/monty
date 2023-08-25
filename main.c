@@ -16,9 +16,15 @@ int main(int argc, char argv[])
 	args_init();
 	get_Strm(argv[1]);
 
-	while (getline(my_arguments->ln, &c, my_arguments->strm) != -1)
+	while (getline(&my_arguments->ln, &c, my_arguments->strm) != -1)
 	{
-		printf("%s", my_arguments->ln);
+		my_arguments->ln_no + 1;
+		tkn_ln();
+		get_intrn();
+		rn_intrn();
+		free_tkn();
 	}
+	close_strm();
+	arg_free();
 	return (0);
 }
