@@ -75,9 +75,13 @@ void get_strm(char *file);
 void free_stack(stack_t *head);
 void tkn_ln(void);
 void arg_val(int argc);
+void del_node(void);
+
 void push(stack_t **stack, unsigned int ln_no);
 void pall(stack_t **stack, unsigned int ln_no);
 void pint(stack_t **stack, unsigned int ln_no);
+void pop(stack_t **stack, unsigned int ln_no);
+
 
 ssize_t getline(char **lineptr, size_t *n, FILE *stream);
 int dprintf(int fd, const char *format, ...);
