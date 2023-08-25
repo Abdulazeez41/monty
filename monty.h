@@ -1,12 +1,14 @@
 #ifndef	_MONTY_H_
 #define _MONTY_H_
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <sys/types.h>
 #include <unistd.h>
 #include <fcntl.h>
 #include <string.h>
-#include <ctype.h>
+#include <stddef.h>
+
 
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
@@ -52,9 +54,15 @@ typedef struct my_args
 	char **tkns;
 	int no_of_tkns;
 	instruction_t *intrn;
+	stack_t *head;
+	int stack_lth;
+	int stack;
 } my_argss;
 
 extern my_argss *my_arguments;
+
+void push(stack_t **stack, unsigned int ln_no);
+void pall(stack_t **stack, unsigned int ln_no);
 
 int arg_val(int argc);
 
@@ -64,6 +72,9 @@ void args_init();
 void failed_malloc(void);
 void get_Strm(char *file);
 void failed_Strm(char *file);
+void free_stack(stack_t *head);
+
+ssize_t getline(char **lineptr, size_t *n, FILE *stream);
 
 
 #endif /* MONTY_H */
