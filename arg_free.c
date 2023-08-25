@@ -3,7 +3,7 @@
 /**
  * arg_free - free memory arguments
  */
-void arg_free()
+void arg_free(void)
 {
 	if (my_arguments == NULL)
 		return;

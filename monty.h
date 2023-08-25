@@ -64,8 +64,8 @@ extern my_argss *my_arguments;
 int num(char *str);
 
 void freed(void);
-void arg_free();
-void args_init();
+void arg_free(void);
+void args_init(void);
 void failed_malloc(void);
 void get_Strm(char *file);
 void free_stack(stack_t *head);

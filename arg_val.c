@@ -6,7 +6,7 @@
  */
 void arg_val(int argc)
 {
-        if (argc == 2)
+	if (argc == 2)
 		return;
 
 	dprintf(2, "USAGE: monty file\n");
