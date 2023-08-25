@@ -61,20 +61,21 @@ typedef struct my_args
 
 extern my_argss *my_arguments;
 
-void push(stack_t **stack, unsigned int ln_no);
-void pall(stack_t **stack, unsigned int ln_no);
-
-int arg_val(int argc);
+int num(char *str);
 
 void freed(void);
 void arg_free();
 void args_init();
 void failed_malloc(void);
 void get_Strm(char *file);
-void failed_Strm(char *file);
 void free_stack(stack_t *head);
+void tkn_ln(void);
+void arg_val(int argc);
+void push(stack_t **stack, unsigned int ln_no);
+void pall(stack_t **stack, unsigned int ln_no);
 
 ssize_t getline(char **lineptr, size_t *n, FILE *stream);
-
+int dprintf(int fd, const char *format, ...);
+FILE *fdopen(int fd, const char *mode);
 
 #endif /* MONTY_H */

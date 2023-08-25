@@ -12,7 +12,7 @@ void get_Strm(char *file)
 	if (f == -1)
 		failed_strm(file);
 
-	my_arguments->strm = open(f, "r");
+	my_arguments->strm = fdopen(f, "r");
 	if (my_arguments->strm == NULL)
 	{
 		close(f);
@@ -26,7 +26,7 @@ void get_Strm(char *file)
  */
 void failed_Strm(char *file)
 {
-	dprintf(stderr, "Error: can't open file %s\n", file);
+	dprintf(2, "Error: can't open file %s\n", file);
 	arg_free();
 	exit(EXIT_FAILURE);
 }

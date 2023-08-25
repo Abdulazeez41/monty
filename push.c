@@ -7,7 +7,7 @@
  */
 void push(stack_t **stack, unsigned int ln_no)
 {
-	if (my_arguments->no_of_tkns <= 1 || !(is_number(my_arguments->tkns[1])))
+	if (my_arguments->no_of_tkns <= 1 || !(num(my_arguments->tkns[1])))
 	{
 		arg_free();
 		dprintf(2, "L%d: usage: push integer\n", ln_no);

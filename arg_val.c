@@ -3,10 +3,8 @@
 /**
  *      arg_val - Entry point
  *      @argc: No. of command line argument
- *
- *      Return: 0 upon success
  */
-int arg_val(int argc)
+void arg_val(int argc)
 {
         if (argc == 2)
 		return;
