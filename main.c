@@ -14,7 +14,7 @@ int main(int argc, char **argv)
 
 	arg_val(argc);
 	args_init();
-	get_Strm(argv[1]);
+	get_strm(argv[1]);
 
 	while (getline(&my_arguments->ln, &c, my_arguments->strm) != -1)
 	{

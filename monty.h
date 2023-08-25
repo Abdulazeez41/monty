@@ -67,7 +67,7 @@ void freed(void);
 void arg_free(void);
 void args_init(void);
 void failed_malloc(void);
-void get_Strm(char *file);
+void get_strm(char *file);
 void free_stack(stack_t *head);
 void tkn_ln(void);
 void arg_val(int argc);
