@@ -81,7 +81,7 @@ void push(stack_t **stack, unsigned int ln_no);
 void pall(stack_t **stack, unsigned int ln_no);
 void pint(stack_t **stack, unsigned int ln_no);
 void pop(stack_t **stack, unsigned int ln_no);
-
+void swap(stack_t **stack, unsigned int ln_no);
 
 ssize_t getline(char **lineptr, size_t *n, FILE *stream);
 int dprintf(int fd, const char *format, ...);
