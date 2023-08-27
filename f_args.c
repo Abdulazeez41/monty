@@ -17,7 +17,7 @@ void free_head(void)
 * f_args - free memory allocated to arguments pointer
 */
 
-void f_args()
+void f_args(void)
 {
 	if (my_arguments == NULL)
 		return;

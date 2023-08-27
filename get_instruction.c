@@ -23,11 +23,11 @@ void get_intrn(void)
 	instruction_t instructions[] = {
 		{"push", &push}, {"pop", &pop},
 		{"pint", &pint}, {"swap", &swap},
-		{"nop", &nop},
+		{"nop", &nop}, {"add", &add},
 		{NULL, NULL}
 	};
 
-	if (my_arguments->no_of_tkns == 0) /* no instructions */
+	if (my_arguments->no_of_tkns == 0)
 		return;
 	if (my_arguments->tkns[0][0] == '#')
 	{
